@@ -1,0 +1,869 @@
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 67]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 67
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 105]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 105
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 118]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 118
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 131]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 131
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: signature_image in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 158]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 170]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 170
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 185]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 185
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 354]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 354
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:51:02 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 359]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 359
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 67]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 67
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 105]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 105
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 118]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 118
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 131]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 131
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: signature_image in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 158]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 170]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 170
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 185]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 185
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 354]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 354
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:52:05 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 359]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 359
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 67]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 67
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 105]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 105
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 118]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 118
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 131]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 131
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: signature_image in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 158]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 170]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 170
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 185]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 185
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 354]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 354
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 22:59:11 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 359]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 359
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:18:57 Notice: Notice (8): Undefined variable: user_data in [/var/www/cakephp2.2.3/app/View/Emails/html/password_recovery_email.ctp, line 10]
+Trace:
+include - APP/View/Emails/html/password_recovery_email.ctp, line 10
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 89
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:18:57 Notice: Notice (8): Undefined variable: url in [/var/www/cakephp2.2.3/app/View/Emails/html/password_recovery_email.ctp, line 12]
+Trace:
+include - APP/View/Emails/html/password_recovery_email.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 89
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:18:57 Notice: Notice (8): Undefined variable: temporary_password in [/var/www/cakephp2.2.3/app/View/Emails/html/password_recovery_email.ctp, line 12]
+Trace:
+include - APP/View/Emails/html/password_recovery_email.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 89
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:18:57 Notice: Notice (8): Undefined variable: url in [/var/www/cakephp2.2.3/app/View/Layouts/Emails/html/default.ctp, line 16]
+Trace:
+include - APP/View/Layouts/Emails/html/default.ctp, line 16
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::renderLayout() - CORE/Cake/View/View.php, line 540
+View::render() - CORE/Cake/View/View.php, line 484
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 89
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:22:02 Notice: Notice (8): Undefined variable: url in [/var/www/cakephp2.2.3/app/View/Emails/html/password_recovery_email.ctp, line 12]
+Trace:
+include - APP/View/Emails/html/password_recovery_email.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 92
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:22:02 Notice: Notice (8): Undefined variable: url in [/var/www/cakephp2.2.3/app/View/Layouts/Emails/html/default.ctp, line 16]
+Trace:
+include - APP/View/Layouts/Emails/html/default.ctp, line 16
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::renderLayout() - CORE/Cake/View/View.php, line 540
+View::render() - CORE/Cake/View/View.php, line 484
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 92
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-15 23:23:18 Notice: Notice (8): Undefined variable: base_url in [/var/www/cakephp2.2.3/app/View/Emails/html/password_recovery_email.ctp, line 12]
+Trace:
+include - APP/View/Emails/html/password_recovery_email.ctp, line 12
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+CakeEmail::_renderTemplates() - CORE/Cake/Network/Email/CakeEmail.php, line 1551
+CakeEmail::_render() - CORE/Cake/Network/Email/CakeEmail.php, line 1418
+CakeEmail::send() - CORE/Cake/Network/Email/CakeEmail.php, line 1057
+UsersController::_sendemail() - APP/Controller/UsersController.php, line 92
+UsersController::forgotPassword() - APP/Controller/UsersController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 485
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 186
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 67]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 67
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 105]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 105
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: appraisal_doc in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 107]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 107
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 118]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 118
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_word in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 120]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 120
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 131]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 131
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: job_description_pdf in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 133]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 133
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: signature_image in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 158]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 158
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 170]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 170
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 185]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 185
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: UserGroup in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 316]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 316
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: contact_number in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 354]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 354
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
+2012-12-16 20:30:30 Notice: Notice (8): Undefined index: address in [/var/www/cakephp2.2.3/app/View/Users/my_profile.ctp, line 359]
+Trace:
+include - APP/View/Users/my_profile.ctp, line 359
+View::_evaluate() - CORE/Cake/View/View.php, line 921
+View::_render() - CORE/Cake/View/View.php, line 884
+View::render() - CORE/Cake/View/View.php, line 476
+Controller::render() - CORE/Cake/Controller/Controller.php, line 956
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 161
+[main] - APP/webroot/index.php, line 92
+
