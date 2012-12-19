@@ -12,7 +12,7 @@
  
  if($slug == 'admin'){
  	//View User Groups
-	$menuArray[] = $this->Html->link($this->Html->image('/images/shared/user_group.png',array('width'=>'80','height'=>'81')),array('controller'=>'userGroups','action'=>'index'),  array('class' => 'info-tooltip','title'=>'View User Groups', 'escape' => false));
+	$menuArray[] = $this->Html->link($this->Html->image('/images/shared/user_group.png',array('width'=>'80','height'=>'81')),array('controller'=>'groups','action'=>'index'),  array('class' => 'info-tooltip','title'=>'View User Groups', 'escape' => false));
 	$title[]='View User Groups';
 	
     //View Users 	

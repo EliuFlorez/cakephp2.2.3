@@ -1,5 +1,7 @@
 
-<div id="page-heading"><h1>Sign Up</h1></div>
+	
+
+<div id="page-heading"><h1>Edit School</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -28,96 +30,91 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add Details</a></div>
-				
+			<div class="step-dark-left"><a href="">Edit school details</a></div>
+			
+		
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
-	<?php echo $this->Form->create('User', array(
+	<?php echo $this->Form->create('School', array(
 										    'inputDefaults' => array(
 										        'label' => false,
 										        'div' => false,
 										        'class'=>'inp-form'
-										    ),
-										   
+										    )
 										));
 	 ?>	
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Register As :</th>
-				<td><?php echo $this->Form->input('group_id',array('class'=>'styledselect_form_1','empty'=>'Choose One')); ?></td>
-				<td></td>
+				<th valign="top">School name:</th>
+				<td>
+                    <?php 
+                      echo $this->Form->input('id');  
+                      echo $this->Form->input('school_name');
+                    ?>
+				</td>
+				<td>
+				
+				</td>
 			</tr>
 			
-					
 			<tr>
-				<th valign="top">First Name:</th>
-				<td><?php echo $this->Form->input('first_name'); ?></td>
+				<th valign="top">Registration number:</th>
+				<td><?php echo $this->Form->input('registration_number'); ?></td>
 				<td></td>
 			</tr>	
-			
 			<tr>
-				<th valign="top">Last Name:</th>
-				<td><?php echo $this->Form->input('last_name'); ?></td>
+				<th valign="top">Conact Number:</th>
+				<td><?php echo $this->Form->input('contact_number'); ?></td>
+				<td></td>
+			</tr>
+		
+			<tr>
+				<th valign="top">Address:</th>
+				<td><?php echo $this->Form->input('location',array('class'=>'form-textarea')); ?></td>
 				<td></td>
 			</tr>
 			
-			<tr>
-				<th valign="top">Username:</th>
-				<td><?php echo $this->Form->input('username'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Password:</th>
-				<td><?php echo $this->Form->input('password'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Confirm Password:</th>
-				<td><?php echo $this->Form->input('confirm_password',array('type'=>'password')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Date of birth:</th>
-				<td><?php echo $this->Form->input('date_of_birth',array('class'=>'')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Gender:</th>
-				<td><?php echo $this->Form->input('gender',array(
-													'options'=>array(
-														'Male'=>'Male',
-														'Female'=>'Female'
-													),
-													'class'=>'styledselect_form_1',
-													'empty'=>'Choose One'
-													)); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th>&nbsp;</th>
-				<td valign="top">
-					<?php
-					    
-					   echo $this->Form->button('', array('class'=>'form-submit','type' => 'submit')); 
-					   echo $this->Form->button('', array('class'=>'form-reset','type' => 'reset'));
-					   
-					?>
-				</td>
-				<td></td>
-			</tr>
+		
+		<?php $i = 0; foreach ($school['Division'] as $division): 
+		
+		   echo "<tr>";
+		   echo "<th valign='top'>Division:</th><td>";	
+		   echo $this->Form->input('Division.'.$i.'.id');
+		   echo $this->Form->input('Division.'.$i.'.division_name');
+		   echo "</td><td></td></tr>";	
+		$i++;
+		?>
+		
+		<?php endforeach; ?>	
+		
+		<tr id='newitems'>
+			<th valign="top"></th>
+			<td>
+			   <input type="hidden" value="<?php echo $i++;?>" id="items">
+			   <button type='button' class='addnew'> <i class="icon-plus-sign"></i> + Add Division</button>
+			</td>
+			<td></td>
+		</tr>	
+		<tr>
+			<th>&nbsp;</th>
+			<td valign="top">
+				<?php
+				    
+				   echo $this->Form->button('', array('class'=>'form-submit','type' => 'submit')); 
+				   echo $this->Form->button('', array('class'=>'form-reset','type' => 'reset'));
+				   
+				?>
+			</td>
+			<td></td>
+		</tr>
 		</table>
 	  </form>	
 	<!-- end id-form  -->
-
+	
 	</td>
 	<td>
 
@@ -218,6 +215,34 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
 	
+	$('.addnew').click(function(){
+		var no = $("#items").val();
+			
+		 $('table tr#newitems').before('<tr>'
+			 				 +'<th valign="top">Division:</th>'
+							 +'<td><div class="input text required">'
+							 +'<input type="text" class="inp-form" id="Division'+no+'DivisionName" maxlength="100" name="data[Division]['+no+'][division_name]"/>'
+							 +'<a href="#" class="removeitem">remove</a></div></td>'
+							 +'</tr>');
+							 		 
+						
+		$("#items").attr('value',parseInt(no)+1);
 	
+	   return true;
+	});
 	
+	$('.removeitem').live('click', function(){
+		 $(this).closest("tr").hide();
+		return false;
+	});
+	
+});
+</script>

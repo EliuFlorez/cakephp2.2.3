@@ -1,5 +1,9 @@
 
-<div id="page-heading"><h1>Sign Up</h1></div>
+	
+	
+	
+
+<div id="page-heading"><h1>Edit Division</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -28,79 +32,41 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add Details</a></div>
-				
+			<div class="step-dark-left"><a href="">Edit division details</a></div>
+			
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
-	<?php echo $this->Form->create('User', array(
+	<?php echo $this->Form->create('Division', array(
 										    'inputDefaults' => array(
 										        'label' => false,
 										        'div' => false,
 										        'class'=>'inp-form'
-										    ),
-										   
+										    )
 										));
 	 ?>	
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Register As :</th>
-				<td><?php echo $this->Form->input('group_id',array('class'=>'styledselect_form_1','empty'=>'Choose One')); ?></td>
-				<td></td>
+				<th valign="top">School :</th>
+				<td>
+				   <?php
+				     echo $this->Form->input('id');	
+				     echo $this->Form->input('school_id',array('class'=>'styledselect_form_1'));
+				   ?>
+				</td>
+				<td>
+				
+				</td>
 			</tr>
 			
-					
 			<tr>
-				<th valign="top">First Name:</th>
-				<td><?php echo $this->Form->input('first_name'); ?></td>
+				<th valign="top">Division Name:</th>
+				<td><?php echo $this->Form->input('division_name'); ?></td>
 				<td></td>
 			</tr>	
-			
-			<tr>
-				<th valign="top">Last Name:</th>
-				<td><?php echo $this->Form->input('last_name'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Username:</th>
-				<td><?php echo $this->Form->input('username'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Password:</th>
-				<td><?php echo $this->Form->input('password'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Confirm Password:</th>
-				<td><?php echo $this->Form->input('confirm_password',array('type'=>'password')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Date of birth:</th>
-				<td><?php echo $this->Form->input('date_of_birth',array('class'=>'')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Gender:</th>
-				<td><?php echo $this->Form->input('gender',array(
-													'options'=>array(
-														'Male'=>'Male',
-														'Female'=>'Female'
-													),
-													'class'=>'styledselect_form_1',
-													'empty'=>'Choose One'
-													)); ?></td>
-				<td></td>
-			</tr>
 			
 			<tr>
 				<th>&nbsp;</th>
@@ -218,6 +184,3 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
-	
-	
-	

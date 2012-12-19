@@ -1,8 +1,7 @@
 
-
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Users</h1>
+		<h1>Divisions</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -32,40 +31,33 @@
 			   </div>
 
 		  <!--  start product-table ..................................................................................... -->
-				<?php echo $this->Html->link(__('New User'), array('action' => 'add'));?>
+				
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
 					<th class="table-header-check"><?php echo $this->Paginator->sort('id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('group_id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('first_name'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('last_name'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('email_address'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('mobile_number'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('school_id'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('division_id'); ?></th>
+					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('created'); ?></th>
+					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('modified'); ?></th>
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
-		<?php foreach ($users as $user): ?>
+		<?php foreach ($divisions as $division): ?>
 		       <tr>
-					<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
-					<td><?php echo h($user['Group']['group_name']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['first_name']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['last_name']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['email_address']); ?>&nbsp;</td>
-					<td><?php echo h($user['User']['mobile_number']); ?>&nbsp;</td>
-									
+					<td><?php echo h($division['Division']['id']); ?>&nbsp;</td>
+					<td><?php echo h($division['School']['school_name']); ?>&nbsp;</td>
+					<td><?php echo h($division['Division']['division_name']); ?>&nbsp;</td>
+					<td><?php echo h($division['Division']['created']); ?>&nbsp;</td>
+					<td><?php echo h($division['Division']['modified']); ?>&nbsp;</td>
+					
      				<td class="options-width">
-						<?php echo $this->Html->link('', array('action' => 'view', $user['User']['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
-						<?php echo $this->Html->link('', array('action' => 'edit', $user['User']['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
-						<?php echo $this->Form->postLink('', array('action' => 'delete', $user['User']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+						<?php echo $this->Html->link('', array('action' => 'view', $division['Division']['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
+						<?php echo $this->Html->link('', array('action' => 'edit', $division['Division']['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
+						<?php echo $this->Form->postLink('', array('action' => 'delete', $division['Division']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $division['Division']['id'])); ?>
 					</td>
 				</tr>
 		<?php endforeach; ?>
-		
-		<?php if(empty($users)){ ?>
-				 <tr>
-					<td colspan="10" style="text-align:center">No records found &nbsp;</td>
-				 </tr>	
+
 				
-		<?php } ?>		
 				</table>
 				<!--  end product-table................................... --> 
 				
@@ -76,13 +68,6 @@
 			<table border="0" cellpadding="0" cellspacing="0" id="paging-table">
 			<tr>
 			<td>
-			    <p style="float:right;">
-                    <?php
-                    echo $this->Paginator->counter(array(
-                    'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-                    ));
-                    ?>
-                </p><br/>
 				<div class="paging">
 					<?php
 						echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
@@ -109,4 +94,4 @@
 	</tr>
 	</table>
 
-		
+	

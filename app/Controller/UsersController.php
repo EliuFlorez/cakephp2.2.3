@@ -29,6 +29,7 @@ class UsersController extends AppController {
     		            
 	    if ($this->request->is('post')){
 	        if ($this->Auth->login()) {
+	        	$this->_setSlug();
 	            $this->redirect($this->Auth->redirect());
 	        } else {
 	            $this->Session->setFlash(__('Invalid username or password, try again'),'flash_red');
@@ -37,7 +38,11 @@ class UsersController extends AppController {
 	}
 	
 	
-	
+	public function _setSlug(){
+		  $this->User->Group->id=AuthComponent::user('group_id');
+		  $this->Session->write('slug',$this->User->Group->field('slug'));
+		  $this->Session->write('group_name',$this->User->Group->field('group_name'));
+	}
 	
 	public function logout() {
 	    $this->redirect($this->Auth->logout());
@@ -99,17 +104,6 @@ class UsersController extends AppController {
         
         
         
-	public function MyProfile() {
-	      $this->set("title_for_layout","My Profile: View Profile"); 
-				$this->User->id = AuthComponent::user('id');
-					if (!$this->User->exists()) {
-				 	     $this->flash('Invalid User','/users/index',1);
-			                     //throw new NotFoundException(__('Invalid user'));
-					}
-			
-			$this->set('user', $this->User->read(null, AuthComponent::user('id')));
-	}
-	
 	public function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
@@ -156,7 +150,7 @@ class UsersController extends AppController {
 				$id = $this->User->id;
 		        $this->request->data['User'] = array_merge($this->request->data['User'], array('id' => $id));
 		        $this->Auth->login($this->request->data['User']);
-		        $this->redirect('/departments/index');
+		        $this->redirect(array('controller'=>'users','action'=>'myProfile'));
         
 				$this->Session->setFlash(__('The user has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
@@ -167,6 +161,44 @@ class UsersController extends AppController {
 		$groups = $this->User->Group->find('list',array('conditions'=>array('allow_register'=>true)));
 		$this->set(compact('groups'));
 	}
+	
+	
+	public function myProfile(){
+		
+		$id = $this->User->id = AuthComponent::user('id');
+		
+		if (!$this->User->exists()) {
+			throw new NotFoundException(__('Invalid user'));
+		}
+				
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->User->saveAll($this->request->data,array('deep'=>'true'))) {
+				$this->Session->setFlash(__('The user has been saved'),'flash_green');
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The user could not be saved. Please, try again.'),'flash_red');
+			}
+		} else {
+			$this->request->data = $this->User->read(null, $id);
+			//echo "<pre/>"; print_r($this->request->data);exit();
+		}
+		
+		
+		if($this->Session->read('slug')=='parent'){
+		  $this->render('parent_profile');	
+		}
+		
+		if($this->Session->read('slug')=='student'){
+		
+		    $this->render('student_profile');	
+		}
+		
+		if($this->Session->read('slug')=='teacher'){
+		  $this->render('teacherProfile');	
+		}
+		
+	}
+	
 
 /**
  * edit method
@@ -181,7 +213,7 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->User->save($this->request->data)) {
+			if ($this->User->saveAll($this->request->data,array('deep'=>'true'))) {
 				$this->Session->setFlash(__('The user has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
 			} else {

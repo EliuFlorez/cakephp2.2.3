@@ -1,5 +1,5 @@
 
-<div id="page-heading"><h1>Sign Up</h1></div>
+<div id="page-heading"><h1>My Profile</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -28,27 +28,38 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add Details</a></div>
+			<div class="step-dark-left"><a href="">My Details</a></div>
 				
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
+	
+		
 	<?php echo $this->Form->create('User', array(
 										    'inputDefaults' => array(
 										        'label' => false,
 										        'div' => false,
 										        'class'=>'inp-form'
+										       
 										    ),
+										  
 										   
 										));
 	 ?>	
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Register As :</th>
-				<td><?php echo $this->Form->input('group_id',array('class'=>'styledselect_form_1','empty'=>'Choose One')); ?></td>
+				<th valign="top">Registered As :</th>
+				<td>
+				   Parent
+				   <?php 
+				     echo $this->Form->input('id');	
+				     echo $this->Form->input('Gaurdian.id');	
+				     
+				   ?>
+				</td>
 				<td></td>
 			</tr>
 			
@@ -60,26 +71,50 @@
 			</tr>	
 			
 			<tr>
+				<th valign="top">Middle Name:</th>
+				<td><?php echo $this->Form->input('middle_name'); ?></td>
+				<td></td>
+			</tr>
+			
+			<tr>
 				<th valign="top">Last Name:</th>
 				<td><?php echo $this->Form->input('last_name'); ?></td>
 				<td></td>
 			</tr>
-			
 			<tr>
-				<th valign="top">Username:</th>
-				<td><?php echo $this->Form->input('username'); ?></td>
+				<th valign="top">Email Address:</th>
+				<td><?php echo $this->Form->input('email_address'); ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
-				<th valign="top">Password:</th>
-				<td><?php echo $this->Form->input('password'); ?></td>
+				<th valign="top">Qualification:</th>
+				<td><?php echo $this->Form->input('Gaurdian.qualification'); ?></td>
 				<td></td>
 			</tr>
-			
 			<tr>
-				<th valign="top">Confirm Password:</th>
-				<td><?php echo $this->Form->input('confirm_password',array('type'=>'password')); ?></td>
+				<th valign="top">Mobile No:</th>
+				<td><?php echo $this->Form->input('mobile_number'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Telephone No:</th>
+				<td><?php echo $this->Form->input('telephone_no'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Address :</th>
+				<td><?php echo $this->Form->input('address',array('class'=>'form-textaread')); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Fax :</th>
+				<td><?php echo $this->Form->input('fax'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Pincode:</th>
+				<td><?php echo $this->Form->input('pincode'); ?></td>
 				<td></td>
 			</tr>
 			

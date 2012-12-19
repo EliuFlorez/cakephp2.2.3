@@ -1,5 +1,7 @@
+	
+	
 
-<div id="page-heading"><h1>Sign Up</h1></div>
+<div id="page-heading"><h1>School</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -28,94 +30,62 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add Details</a></div>
-				
+			<div class="step-dark-left"><a href="">View school details</a></div>
+		
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
-	<?php echo $this->Form->create('User', array(
-										    'inputDefaults' => array(
-										        'label' => false,
-										        'div' => false,
-										        'class'=>'inp-form'
-										    ),
-										   
-										));
-	 ?>	
+	
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Register As :</th>
-				<td><?php echo $this->Form->input('group_id',array('class'=>'styledselect_form_1','empty'=>'Choose One')); ?></td>
-				<td></td>
+				<th valign="top">School id:</th>
+				<td><?php echo $school['School']['id']; ?></td>
+				<td>
+				
+				</td>
 			</tr>
-			
-					
 			<tr>
-				<th valign="top">First Name:</th>
-				<td><?php echo $this->Form->input('first_name'); ?></td>
+				<th valign="top">School name:</th>
+				<td><?php echo $school['School']['school_name']; ?></td>
+				<td>
+				
+				</td>
+			</tr>
+			<tr>
+				<th valign="top">Registration number:</th>
+				<td><?php echo $school['School']['registration_number']; ?></td>
 				<td></td>
 			</tr>	
-			
 			<tr>
-				<th valign="top">Last Name:</th>
-				<td><?php echo $this->Form->input('last_name'); ?></td>
+				<th valign="top">Conact Number:</th>
+				<td><?php echo $school['School']['contact_number']; ?></td>
+				<td></td>
+			</tr>
+		
+			<tr>
+				<th valign="top">Address:</th>
+				<td><?php echo $school['School']['location']; ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
-				<th valign="top">Username:</th>
-				<td><?php echo $this->Form->input('username'); ?></td>
+				<th valign="top">Created:</th>
+				<td><?php echo $school['School']['created']; ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
-				<th valign="top">Password:</th>
-				<td><?php echo $this->Form->input('password'); ?></td>
+				<th valign="top">Updated:</th>
+				<td><?php echo $school['School']['modified']; ?></td>
 				<td></td>
 			</tr>
+	
 			
-			<tr>
-				<th valign="top">Confirm Password:</th>
-				<td><?php echo $this->Form->input('confirm_password',array('type'=>'password')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Date of birth:</th>
-				<td><?php echo $this->Form->input('date_of_birth',array('class'=>'')); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Gender:</th>
-				<td><?php echo $this->Form->input('gender',array(
-													'options'=>array(
-														'Male'=>'Male',
-														'Female'=>'Female'
-													),
-													'class'=>'styledselect_form_1',
-													'empty'=>'Choose One'
-													)); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th>&nbsp;</th>
-				<td valign="top">
-					<?php
-					    
-					   echo $this->Form->button('', array('class'=>'form-submit','type' => 'submit')); 
-					   echo $this->Form->button('', array('class'=>'form-reset','type' => 'reset'));
-					   
-					?>
-				</td>
-				<td></td>
-			</tr>
 		</table>
-	  </form>	
+	  
 	<!-- end id-form  -->
 
 	</td>
@@ -205,7 +175,56 @@
 </table>
  
 <div class="clear"></div>
- 
+  
+
+
+
+  
+<div class="related">
+	<h3><?php echo __('Related Divisions'); ?></h3>
+	<div class="actions">
+		<ul>
+			<li><?php echo $this->Html->link(__('New Division'), array('controller' => 'divisions', 'action' => 'add')); ?> </li>
+		</ul>
+	</div>
+	<?php if (!empty($school['Division'])): ?>
+	
+	<!--  start product-table ..................................................................................... -->
+				
+				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
+				<tr>
+					<th class="table-header-check"><a href=""><?php echo __('Id'); ?></a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href=""><?php echo __('Division name'); ?></a></th>
+					<th class="table-header-repeat line-left"><a href=""><?php echo __('Created'); ?></a></th>
+					<th class="table-header-repeat line-left"><a href=""><?php echo __('Modified'); ?></a></th>
+					
+					<th class="table-header-options line-left"><a href="">Options</a></th>
+				</tr>
+		<?php $i = 0; foreach ($school['Division'] as $division): ?>
+		      <tr>
+		        <td><?php echo $division['id']; ?></td>
+				<td><?php echo $division['division_name']; ?></td>
+				<td><?php echo $division['created']; ?></td>
+				<td><?php echo $division['modified']; ?></td>
+				<td class="actions">
+					
+					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'view', $division['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
+					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'edit', $division['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
+					<?php echo $this->Form->postLink('', array('controller' => 'divisions','action' => 'delete', $division['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $division['id'])); ?>
+						
+				</td>
+			</tr>
+		<?php endforeach; ?>
+
+				
+				</table>
+				<!--  end product-table................................... --> 
+	
+<?php endif; ?>
+
+	
+</div>
+
 
 </div>
 <!--  end content-table-inner  -->
@@ -218,6 +237,4 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
-	
-	
-	
+		

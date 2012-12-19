@@ -1,24 +1,22 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Group Model
+ * Standard Model
  *
- * @property User $User
+ * @property School $School
+ * @property Division $Division
  */
-class Group extends AppModel {
+class Standard extends AppModel {
 
 /**
  * Validation rules
  *
  * @var array
  */
-
-	public $displayField = 'group_name';
-	
 	public $validate = array(
-		'group_name' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+		'school_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -26,9 +24,9 @@ class Group extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'slug' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+		'division_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -36,9 +34,9 @@ class Group extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'is_deleted' => array(
-			'boolean' => array(
-				'rule' => array('boolean'),
+		'standard_name' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -51,24 +49,24 @@ class Group extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * hasMany associations
+ * belongsTo associations
  *
  * @var array
  */
-	public $hasMany = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'group_id',
-			'dependent' => true,
+	public $belongsTo = array(
+		'School' => array(
+			'className' => 'School',
+			'foreignKey' => 'school_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
+			'order' => ''
+		),
+		'Division' => array(
+			'className' => 'Division',
+			'foreignKey' => 'division_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
-
 }

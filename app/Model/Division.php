@@ -1,11 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Group Model
+ * Department Model
  *
+ * @property Company $Company
  * @property User $User
  */
-class Group extends AppModel {
+class Division extends AppModel {
 
 /**
  * Validation rules
@@ -13,12 +14,12 @@ class Group extends AppModel {
  * @var array
  */
 
-	public $displayField = 'group_name';
-	
+	public $displayField = 'division_name';
+		
 	public $validate = array(
-		'group_name' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
+		'school_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -26,7 +27,7 @@ class Group extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'slug' => array(
+		'division_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -51,6 +52,22 @@ class Group extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'School' => array(
+			'className' => 'School',
+			'foreignKey' => 'school_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'counterCache'=>true
+		)
+	);
+
+/**
  * hasMany associations
  *
  * @var array
@@ -58,8 +75,8 @@ class Group extends AppModel {
 	public $hasMany = array(
 		'User' => array(
 			'className' => 'User',
-			'foreignKey' => 'group_id',
-			'dependent' => true,
+			'foreignKey' => 'division_id',
+			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',

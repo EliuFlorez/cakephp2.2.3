@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'sandip',
+		'password' => 'root',
 		'database' => 'my_pro',
 		'prefix' => '',
 		//'encoding' => 'utf8',

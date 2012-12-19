@@ -1,22 +1,21 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Group Model
+ * Company Model
  *
- * @property User $User
+ * @property Department $Department
  */
-class Group extends AppModel {
+class School extends AppModel {
 
 /**
  * Validation rules
  *
  * @var array
  */
-
-	public $displayField = 'group_name';
+	public $displayField = 'school_name';
 	
 	public $validate = array(
-		'group_name' => array(
+		'school_name' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -26,7 +25,37 @@ class Group extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'slug' => array(
+		'division_count' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'registration_number' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'location' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'contact_number' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -37,8 +66,8 @@ class Group extends AppModel {
 			),
 		),
 		'is_deleted' => array(
-			'boolean' => array(
-				'rule' => array('boolean'),
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -56,9 +85,9 @@ class Group extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'group_id',
+		'Division' => array(
+			'className' => 'Division',
+			'foreignKey' => 'school_id',
 			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',

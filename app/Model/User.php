@@ -139,7 +139,7 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'department_id' => array(
+		'division_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -167,9 +167,9 @@ class User extends AppModel {
 			'order' => '',
 			'counterCache'=>true
 		),
-		'Department' => array(
-			'className' => 'Department',
-			'foreignKey' => 'department_id',
+		'Division' => array(
+			'className' => 'Division',
+			'foreignKey' => 'division_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
@@ -177,6 +177,9 @@ class User extends AppModel {
 			
 		)
 	);
+	
+	public $hasOne=array('Gaurdian','Student');
+	
 	
 	public function beforeSave($options = array()) {
 		

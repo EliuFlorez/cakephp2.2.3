@@ -186,19 +186,19 @@
 	<div id="top-search">
 		<table border="0" cellpadding="0" cellspacing="0">
 		<tr>
-		<td><input type="text" value="Search" onblur="if (this.value=='') { this.value='Search'; }" onfocus="if (this.value=='Search') { this.value=''; }" class="top-search-inp" /></td>
-		<td>
-		<select  class="styledselect">
-			<option value=""> All</option>
-			<option value=""> Products</option>
-			<option value=""> Categories</option>
-			<option value="">Clients</option>
-			<option value="">News</option>
-		</select> 
-		</td>
-		<td>
-		  <?php echo $this->Html->image('/images/shared/top_search_btn.gif',array('alt'=>''));?>
-		</td>
+			<td><input type="text" value="Search" onblur="if (this.value=='') { this.value='Search'; }" onfocus="if (this.value=='Search') { this.value=''; }" class="top-search-inp" /></td>
+			<td>
+			<select  class="styledselect">
+				<option value=""> All</option>
+				<option value=""> Products</option>
+				<option value=""> Categories</option>
+				<option value="">Clients</option>
+				<option value="">News</option>
+			</select> 
+			</td>
+			<td>
+			  <?php echo $this->Html->image('/images/shared/top_search_btn.gif',array('alt'=>''));?>
+			</td>
 		</tr>
 		</table>
 	</div>
@@ -238,10 +238,10 @@
 				<a href="" id="acc-settings">Settings</a>
 				<div class="clear">&nbsp;</div>
 				<div class="acc-line">&nbsp;</div>
-				<a href="" id="acc-details">Personal details </a>
+				<a href="" id="acc-details"><?php echo AuthComponent::user('name')?> </a>
 				<div class="clear">&nbsp;</div>
 				<div class="acc-line">&nbsp;</div>
-				<a href="" id="acc-project">Project details</a>
+				<a href="" id="acc-project"><?php echo $this->Session->read('group_name');?></a>
 				<div class="clear">&nbsp;</div>
 				<div class="acc-line">&nbsp;</div>
 				<a href="" id="acc-inbox">Inbox</a>
@@ -260,13 +260,12 @@
 		<div class="nav">
 		<div class="table">
 		
-		<ul class="select"><li><a href="#nogo"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<ul class="select <?php if($this->params->controller =='dashboards'){echo "current";}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'dashboards','action'=>'index'));?>"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub">
 			<ul class="sub">
-				<li><a href="#nogo">Dashboard Details 1</a></li>
-				<li><a href="#nogo">Dashboard Details 2</a></li>
-				<li><a href="#nogo">Dashboard Details 3</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'myProfile'));?>">MyProfile</a></li>
+								
 			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
@@ -282,8 +281,8 @@
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub <?php if(($this->params->controller =='users') ||($this->params->controller =='groups')){echo 'show';}?>">
 			<ul class="sub">
-				<li><a href="<?php echo $this->Html->url(array('controller'=>'groups','action'=>'index'));?>">User Groups</a></li>
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'index'));?>">Users</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'groups','action'=>'index'));?>">User Groups</a></li>
 		    </ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
@@ -292,12 +291,12 @@
 		
 		<div class="nav-divider">&nbsp;</div>
 		                    
-		<ul class="select <?php  if(($this->params->controller =='companies') ||($this->params->controller =='departments')){echo 'current';}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'companies','action'=>'index'))?>"><b>Company Mgmt</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<ul class="select <?php  if(($this->params->controller =='schools') ||($this->params->controller =='divisions')){echo 'current';}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'))?>"><b>School Mgmt</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub <?php if(($this->params->controller =='companies') ||($this->params->controller =='departments')){echo 'show';}?>">
+		<div class="select_sub <?php if(($this->params->controller =='schools') ||($this->params->controller =='divisions')){echo 'show';}?>">
 			<ul class="sub">
-				<li><a href="<?php echo $this->Html->url(array('controller'=>'companies','action'=>'index'));?>">Company</a></li>
-				<li><a href="<?php echo $this->Html->url(array('controller'=>'departments','action'=>'index'));?>">Departments</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'));?>">School</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'divisions','action'=>'index'));?>">Divisions</a></li>
 				
 			</ul>
 		</div>
