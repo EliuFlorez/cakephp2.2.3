@@ -48,7 +48,7 @@
 		       <tr>
 					<td><?php echo h($school['School']['id']); ?>&nbsp;</td>
 					<td><?php echo h($school['School']['school_name']); ?>&nbsp;</td>
-					<td><?php echo h($school['School']['division_count']); ?>&nbsp;</td>
+					<td><?php echo h($school['School']['standard_count']); ?>&nbsp;</td>
 					<td><?php echo h($school['School']['registration_number']); ?>&nbsp;</td>
 					<td><?php echo h($school['School']['location']); ?>&nbsp;</td>
 					<td><?php echo h($school['School']['contact_number']); ?>&nbsp;</td>

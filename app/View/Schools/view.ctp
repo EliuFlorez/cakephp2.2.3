@@ -181,36 +181,36 @@
 
   
 <div class="related">
-	<h3><?php echo __('Related Divisions'); ?></h3>
+	<h3><?php echo __('Related Standards'); ?></h3>
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Division'), array('controller' => 'divisions', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('New Standard'), array('controller' => 'standards', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-	<?php if (!empty($school['Division'])): ?>
+	<?php if (!empty($school['Standard'])): ?>
 	
 	<!--  start product-table ..................................................................................... -->
 				
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
 					<th class="table-header-check"><a href=""><?php echo __('Id'); ?></a></th>
-					<th class="table-header-repeat line-left minwidth-1"><a href=""><?php echo __('Division name'); ?></a></th>
+					<th class="table-header-repeat line-left minwidth-1"><a href=""><?php echo __('Standard name'); ?></a></th>
 					<th class="table-header-repeat line-left"><a href=""><?php echo __('Created'); ?></a></th>
 					<th class="table-header-repeat line-left"><a href=""><?php echo __('Modified'); ?></a></th>
 					
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
-		<?php $i = 0; foreach ($school['Division'] as $division): ?>
+		<?php $i = 0; foreach ($school['Standard'] as $standard): ?>
 		      <tr>
-		        <td><?php echo $division['id']; ?></td>
-				<td><?php echo $division['division_name']; ?></td>
-				<td><?php echo $division['created']; ?></td>
-				<td><?php echo $division['modified']; ?></td>
+		        <td><?php echo $standard['id']; ?></td>
+				<td><?php echo $standard['standard_name']; ?></td>
+				<td><?php echo $standard['created']; ?></td>
+				<td><?php echo $standard['modified']; ?></td>
 				<td class="actions">
 					
-					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'view', $division['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
-					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'edit', $division['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
-					<?php echo $this->Form->postLink('', array('controller' => 'divisions','action' => 'delete', $division['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $division['id'])); ?>
+					<?php echo $this->Html->link('', array('controller' => 'standards','action' => 'view', $standard['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
+					<?php echo $this->Html->link('', array('controller' => 'standards','action' => 'edit', $standard['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
+					<?php echo $this->Form->postLink('', array('controller' => 'standards','action' => 'delete', $standard['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $standard['id'])); ?>
 						
 				</td>
 			</tr>

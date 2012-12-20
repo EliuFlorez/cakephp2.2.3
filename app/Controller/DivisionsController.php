@@ -12,12 +12,6 @@ class DivisionsController extends AppController {
  *
  * @return void
  */
-
-	public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('add');
-    }
-    
 	public function index() {
 		$this->Division->recursive = 0;
 		$this->set('divisions', $this->paginate());
@@ -46,15 +40,16 @@ class DivisionsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Division->create();
-			if ($this->Division->saveAll($this->request->data,array('deep'=>true))) {
-				$this->Session->setFlash(__('The division has been saved'),'flash_green');
+			if ($this->Division->save($this->request->data)) {
+				$this->Session->setFlash(__('The division has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The division could not be saved. Please, try again.'),'flash_red');
+				$this->Session->setFlash(__('The division could not be saved. Please, try again.'));
 			}
 		}
-		$companies = $this->Division->Company->find('list');
-		$this->set(compact('companies'));
+		$schools = $this->Division->School->find('list');
+		$divisions = $this->Division->Division->find('list');
+		$this->set(compact('schools', 'divisions'));
 	}
 
 /**
@@ -70,17 +65,18 @@ class DivisionsController extends AppController {
 			throw new NotFoundException(__('Invalid division'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Division->saveAll($this->request->data,array('deep'=>true))) {
-				$this->Session->setFlash(__('The division has been saved'),'flash_green');
+			if ($this->Division->save($this->request->data)) {
+				$this->Session->setFlash(__('The division has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The division could not be saved. Please, try again.'),'flash_red');
+				$this->Session->setFlash(__('The division could not be saved. Please, try again.'));
 			}
 		} else {
 			$this->request->data = $this->Division->read(null, $id);
 		}
 		$schools = $this->Division->School->find('list');
-		$this->set(compact('schools'));
+		$divisions = $this->Division->Division->find('list');
+		$this->set(compact('schools', 'divisions'));
 	}
 
 /**
@@ -100,10 +96,10 @@ class DivisionsController extends AppController {
 			throw new NotFoundException(__('Invalid division'));
 		}
 		if ($this->Division->delete()) {
-			$this->Session->setFlash(__('Division deleted'),'flash_green');
+			$this->Session->setFlash(__('Division deleted'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Division was not deleted'),'flash_red');
+		$this->Session->setFlash(__('Division was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

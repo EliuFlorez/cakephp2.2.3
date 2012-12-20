@@ -79,12 +79,12 @@
 			</tr>
 			
 		
-		<?php $i = 0; foreach ($school['Division'] as $division): 
+		<?php $i = 0; foreach ($school['Standard'] as $standard): 
 		
 		   echo "<tr>";
-		   echo "<th valign='top'>Division:</th><td>";	
-		   echo $this->Form->input('Division.'.$i.'.id');
-		   echo $this->Form->input('Division.'.$i.'.division_name');
+		   echo "<th valign='top'>Standard:</th><td>";	
+		   echo $this->Form->input('Standard.'.$i.'.id');
+		   echo $this->Form->input('Standard.'.$i.'.standard_name');
 		   echo "</td><td></td></tr>";	
 		$i++;
 		?>
@@ -95,7 +95,7 @@
 			<th valign="top"></th>
 			<td>
 			   <input type="hidden" value="<?php echo $i++;?>" id="items">
-			   <button type='button' class='addnew'> <i class="icon-plus-sign"></i> + Add Division</button>
+			   <button type='button' class='addnew'> <i class="icon-plus-sign"></i> + Add Standard</button>
 			</td>
 			<td></td>
 		</tr>	
@@ -227,9 +227,9 @@ $(document).ready(function(){
 		var no = $("#items").val();
 			
 		 $('table tr#newitems').before('<tr>'
-			 				 +'<th valign="top">Division:</th>'
+			 				 +'<th valign="top">Standard:</th>'
 							 +'<td><div class="input text required">'
-							 +'<input type="text" class="inp-form" id="Division'+no+'DivisionName" maxlength="100" name="data[Division]['+no+'][division_name]"/>'
+							 +'<input type="text" class="inp-form" id="Standard'+no+'StandardName" maxlength="100" name="data[Standard]['+no+'][standard_name]"/>'
 							 +'<a href="#" class="removeitem">remove</a></div></td>'
 							 +'</tr>');
 							 		 
