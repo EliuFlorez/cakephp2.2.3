@@ -28,7 +28,11 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">My Details</a></div>
+			<div class="step-dark-left"><a href="#"  class="basic_details">My Details</a></div>
+			<div class="step-dark-right">&nbsp;</div>
+			
+			<div class="step-no-off">2</div>
+			<div class="step-light-left"><a href="#" class="other_details">Other Details</a></div>
 				
 			<div class="clear"></div>
 		</div>
@@ -49,7 +53,11 @@
 										));
 	 ?>	
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
-			
+			<tr>
+				<th valign="top"><h3> My Details<h3></th>
+				<td></td>
+				<td></td>
+			</tr>
 			<tr>
 				<th valign="top">Registered As :</th>
 				<td>
@@ -87,11 +95,6 @@
 				<td></td>
 			</tr>
 			
-			<tr>
-				<th valign="top">Qualification:</th>
-				<td><?php echo $this->Form->input('Gaurdian.qualification'); ?></td>
-				<td></td>
-			</tr>
 			<tr>
 				<th valign="top">Mobile No:</th>
 				<td><?php echo $this->Form->input('mobile_number'); ?></td>
@@ -134,6 +137,22 @@
 													'class'=>'styledselect_form_1',
 													'empty'=>'Choose One'
 													)); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top"><h3> Other Details <h3></th>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Qualification:</th>
+				<td><?php echo $this->Form->input('Gaurdian.qualification'); ?></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<th valign="top">Annual Income:</th>
+				<td><?php echo $this->Form->input('Gaurdian.annual_income'); ?></td>
 				<td></td>
 			</tr>
 			
@@ -255,4 +274,42 @@
 </table>
 	
 	
-	
+	<script>
+	$(document).ready(function(){
+		
+		if($(".basic_details").parent().attr('class') == 'step-dark-left'){
+		  	 $("table#id-form tr:lt(13)").show();
+		  	 $("table#id-form tr:gt(12)").hide();
+		  	 $("table#id-form tr:last").show();
+		 }
+	  
+		 $(".other_details").click(function(){
+		 	 $(".basic_details").parent().attr('class', 'step-light-left');
+		 	 $(".basic_details").parent().prev().attr('class', 'step-no-off');
+		 	 $(".other_details").parent().prev().attr('class', 'step-no');
+		 	 $(".basic_details").parent().next().attr('class', 'step-light-right');
+		 	 $(".other_details").parent().attr('class', 'step-dark-left');
+
+		 	 $("table#id-form tr:lt(13)").hide();
+		  	 $("table#id-form tr:gt(12)").show();
+		  	 $("table#id-form tr:last").show();
+		 })
+		 
+		 $(".basic_details").click(function(){
+		 	 $(".basic_details").parent().prev().attr('class', 'step-no');
+		 	 $(".basic_details").parent().next().attr('class', 'step-dark-right');
+		 	 $(".other_details").parent().next().attr('class', 'step-no-off');
+		 	 $(".other_details").parent().attr('class', 'step-light-left');
+		 	 $(".basic_details").parent().attr('class', 'step-dark-left');
+		 	 $(".other_details").parent().prev().attr('class', 'step-no-off');
+
+		 	 $("table#id-form tr:lt(13)").show();
+		  	 $("table#id-form tr:gt(12)").hide();
+		  	 $("table#id-form tr:last").show();
+		 })
+	})
+	  
+	  
+	   
+	  
+	</script>

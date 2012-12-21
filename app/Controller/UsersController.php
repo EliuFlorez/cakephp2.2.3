@@ -172,6 +172,7 @@ class UsersController extends AppController {
 		}
 				
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//echo "<pre>";	print_r($this->request->data);	exit;
 			if ($this->User->saveAll($this->request->data,array('deep'=>'true'))) {
 				$this->Session->setFlash(__('The user has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
