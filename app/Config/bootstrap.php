@@ -181,4 +181,5 @@ CakeLog::config('error', array(
 ));
 
 
+ Configure::write('loading_image','../img/015.gif');
 

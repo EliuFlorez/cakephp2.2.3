@@ -1,4 +1,33 @@
+<!--
 
+<div class="standards form">
+<?php echo $this->Form->create('Standard'); ?>
+	<fieldset>
+		<legend><?php echo __('Edit Standard'); ?></legend>
+	<?php
+		echo $this->Form->input('id');
+		echo $this->Form->input('school_id');
+		echo $this->Form->input('division_id');
+		echo $this->Form->input('standard_name');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Standard.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Standard.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('List Standards'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Schools'), array('controller' => 'schools', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New School'), array('controller' => 'schools', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Divisions'), array('controller' => 'divisions', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Division'), array('controller' => 'divisions', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
+
+-->
+	
 	
 	
 	
@@ -32,7 +61,7 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Edit division details</a></div>
+			<div class="step-dark-left"><a href="">Edit Division details</a></div>
 			
 			<div class="clear"></div>
 		</div>
@@ -50,23 +79,25 @@
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">School :</th>
+				<th valign="top">Group Name :</th>
 				<td>
 				   <?php
 				     echo $this->Form->input('id');	
-				     echo $this->Form->input('school_id',array('class'=>'styledselect_form_1'));
+				     echo $this->Form->input('standard_id',array(
+														'class'=>'',
+														'empty'=>'Choose one'
+													)); 
 				   ?>
 				</td>
-				<td>
-				
-				</td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Division Name:</th>
-				<td><?php echo $this->Form->input('division_name'); ?></td>
 				<td></td>
-			</tr>	
+			</tr>
+		   			
+			<tr>
+				<th valign="top">Division:</th>
+				<td><?php echo $this->Form->input('division_name');
+					?><span id="response_msg"></span></td>
+				<td></td>
+			</tr>
 			
 			<tr>
 				<th>&nbsp;</th>
@@ -184,3 +215,4 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
+	

@@ -184,7 +184,17 @@
 	
 	<!--  start top-search -->
 	<div id="top-search">
+	     
 		<table border="0" cellpadding="0" cellspacing="0">
+		
+		<tr>
+		   <td><?php echo AuthComponent::user('first_name').'  '. AuthComponent::user('last_name')?></td>
+		   <td><?php echo $this->Session->read('group_name')?></td>
+		   <td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <td colspan="3">&nbsp;</td>
+		</tr>
 		<tr>
 			<td><input type="text" value="Search" onblur="if (this.value=='') { this.value='Search'; }" onfocus="if (this.value=='Search') { this.value=''; }" class="top-search-inp" /></td>
 			<td>
@@ -260,9 +270,10 @@
 		<div class="nav">
 		<div class="table">
 		
-		<ul class="select <?php if($this->params->controller =='dashboards'){echo "current";}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'dashboards','action'=>'index'));?>"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<ul class="select <?php if($this->params->controller =='dashboards'){echo "current";}?>">
+		<li><a href="<?php echo $this->Html->url(array('controller'=>'dashboards','action'=>'index'));?>"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub">
+		<div class="select_sub <?php if($this->params->controller =='dashboards'){echo 'show';}?>">
 			<ul class="sub">
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'myProfile'));?>">MyProfile</a></li>
 								
@@ -296,8 +307,8 @@
 		<div class="select_sub <?php if(($this->params->controller =='schools') ||($this->params->controller =='divisions')){echo 'show';}?>">
 			<ul class="sub">
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'));?>">School</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'standards','action'=>'index'));?>">Standards</a></li>
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'divisions','action'=>'index'));?>">Divisions</a></li>
-				
 			</ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
@@ -305,7 +316,7 @@
 		</ul>
 		
 		<div class="nav-divider">&nbsp;</div>
-				
+			
 		<div class="clear"></div>
 		</div>
 		<div class="clear"></div>

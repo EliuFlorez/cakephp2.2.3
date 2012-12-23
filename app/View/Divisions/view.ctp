@@ -1,9 +1,14 @@
-	
+
+
+
+
+<?php //echo "<pre>"; print_r($division);exit;?>
+
 		
-			
+	
 	
 
-<div id="page-heading"><h1>Division</h1></div>
+<div id="page-heading"><h1>Divisions</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -32,8 +37,8 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">View Division Details</a></div>
-				
+			<div class="step-dark-left"><a href="">View division details</a></div>
+		
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
@@ -43,25 +48,28 @@
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Company id:</th>
+				<th valign="top">Division id:</th>
 				<td><?php echo $division['Division']['id']; ?></td>
 				<td>
 				
 				</td>
 			</tr>
+			
 			<tr>
-				<th valign="top">Company name:</th>
-				<td><?php echo $this->Html->link($division['School']['school_name'], array('controller' => 'schools', 'action' => 'view', $division['School']['id'])); ?></td>
+				<th valign="top">Standard Name:</th>
+				<td><?php echo $division['Standard']['standard_name']; ?></td>
 				<td>
 				
 				</td>
 			</tr>
 			<tr>
-				<th valign="top">Division name:</th>
+				<th valign="top">Division Name:</th>
 				<td><?php echo $division['Division']['division_name']; ?></td>
-				<td></td>
-			</tr>	
-						
+				<td>
+				
+				</td>
+			</tr>
+									
 			<tr>
 				<th valign="top">Created:</th>
 				<td><?php echo $division['Division']['created']; ?></td>
@@ -178,38 +186,38 @@
 			<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
-	<?php if (!empty($division['User'])): ?>
+	<?php if (!empty($group['User'])): ?>
 	
 	<!--  start product-table ..................................................................................... -->
 				
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
-					<th class="table-header-check"><a href=""><?php echo __('User Id'); ?></a></th>
-					
-					<th class="table-header-repeat line-left"><a href=""><?php echo __('first name'); ?></a></th>
-					<th class="table-header-repeat line-left"><a href=""><?php echo __('middle name'); ?></a></th>
-					<th class="table-header-repeat line-left"><a href=""><?php echo __('last name'); ?></a></th>
-										<th class="table-header-repeat line-left"><a href=""><?php echo __('Email Address'); ?></a></th>
+					<th class="table-header-check"><a href=""><?php echo __('Id'); ?></a></th>
+					<th class="table-header-repeat line-left "><a href=""><?php echo __('First Name'); ?></a></th>
+					<th class="table-header-repeat line-left "><a href=""><?php echo __('Middle Name'); ?></a></th>
+					<th class="table-header-repeat line-left "><a href=""><?php echo __('Last Name'); ?></a></th>
+					<th class="table-header-repeat line-left "><a href=""><?php echo __('Email address'); ?></a></th>
+					<th class="table-header-repeat line-left "><a href=""><?php echo __('mobile_number'); ?></a></th>
 					<th class="table-header-repeat line-left"><a href=""><?php echo __('Created'); ?></a></th>
 					<th class="table-header-repeat line-left"><a href=""><?php echo __('Modified'); ?></a></th>
 					
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
-		<?php $i = 0; foreach ($division['User'] as $user): ?>
+		<?php $i = 0; foreach ($group['User'] as $user): ?>
 		      <tr>
 		        <td><?php echo $user['id']; ?></td>
-				
 				<td><?php echo $user['first_name']; ?></td>
 				<td><?php echo $user['middle_name']; ?></td>
 				<td><?php echo $user['last_name']; ?></td>
 				<td><?php echo $user['email_address']; ?></td>
+				<td><?php echo $user['mobile_number']; ?></td>
 				<td><?php echo $user['created']; ?></td>
 				<td><?php echo $user['modified']; ?></td>
 				<td class="actions">
 					
-					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'view', $user['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
-					<?php echo $this->Html->link('', array('controller' => 'divisions','action' => 'edit', $user['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
-					<?php echo $this->Form->postLink('', array('controller' => 'divisions','action' => 'delete', $user['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $user['id'])); ?>
+					<?php echo $this->Html->link('', array('controller' => 'departments','action' => 'view', $user['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
+					<?php echo $this->Html->link('', array('controller' => 'departments','action' => 'edit', $user['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
+					<?php echo $this->Form->postLink('', array('controller' => 'departments','action' => 'delete', $user['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $user['id'])); ?>
 						
 				</td>
 			</tr>
@@ -225,14 +233,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-
 </div>
 <!--  end content-table-inner  -->
 </td>
@@ -244,4 +244,5 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
+				
 		

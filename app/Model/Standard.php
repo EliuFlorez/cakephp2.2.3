@@ -1,10 +1,10 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Standard Model
+ * Department Model
  *
- * @property School $School
- * @property Division $Division
+ * @property Company $Company
+ * @property User $User
  */
 class Standard extends AppModel {
 
@@ -13,18 +13,11 @@ class Standard extends AppModel {
  *
  * @var array
  */
+
+	public $displayField = 'standard_name';
+		
 	public $validate = array(
 		'school_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'division_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -43,7 +36,7 @@ class Standard extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		)
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -59,14 +52,26 @@ class Standard extends AppModel {
 			'foreignKey' => 'school_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
-		),
-		'Division' => array(
-			'className' => 'Division',
-			'foreignKey' => 'division_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'counterCache'=>true
 		)
 	);
+	
+	public $hasMany = array(
+		'Division' => array(
+			'className' => 'Division',
+			'foreignKey' => 'standard_id',
+			'dependent' => true,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
+		
 }

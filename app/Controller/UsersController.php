@@ -172,6 +172,7 @@ class UsersController extends AppController {
 		}
 				
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//echo "<pre>";	print_r($this->request->data);	exit;
 			if ($this->User->saveAll($this->request->data,array('deep'=>'true'))) {
 				$this->Session->setFlash(__('The user has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
@@ -180,16 +181,17 @@ class UsersController extends AppController {
 			}
 		} else {
 			$this->request->data = $this->User->read(null, $id);
-			//echo "<pre/>"; print_r($this->request->data);exit();
+			echo "<pre/>"; print_r($this->request->data);exit();
 		}
 		
 		
 		if($this->Session->read('slug')=='parent'){
-		  $this->render('parent_profile');	
+		   $this->render('parent_profile');	
 		}
 		
 		if($this->Session->read('slug')=='student'){
-		
+			$standards = $this->User->Division->Standard->find('list');
+			$this->set(compact('standards'));
 		    $this->render('student_profile');	
 		}
 		

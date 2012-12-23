@@ -12,6 +12,12 @@ class StandardsController extends AppController {
  *
  * @return void
  */
+
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
+    
 	public function index() {
 		$this->Standard->recursive = 0;
 		$this->set('standards', $this->paginate());
@@ -40,16 +46,15 @@ class StandardsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Standard->create();
-			if ($this->Standard->save($this->request->data)) {
-				$this->Session->setFlash(__('The standard has been saved'));
+			if ($this->Standard->saveAll($this->request->data,array('deep'=>true))) {
+				$this->Session->setFlash(__('The standard has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The standard could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The standard could not be saved. Please, try again.'),'flash_red');
 			}
 		}
 		$schools = $this->Standard->School->find('list');
-		$divisions = $this->Standard->Division->find('list');
-		$this->set(compact('schools', 'divisions'));
+		$this->set(compact('schools'));
 	}
 
 /**
@@ -65,18 +70,18 @@ class StandardsController extends AppController {
 			throw new NotFoundException(__('Invalid standard'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Standard->save($this->request->data)) {
-				$this->Session->setFlash(__('The standard has been saved'));
+			if ($this->Standard->saveAll($this->request->data,array('deep'=>true))) {
+				$this->Session->setFlash(__('The standard has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The standard could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The standard could not be saved. Please, try again.'),'flash_red');
 			}
 		} else {
 			$this->request->data = $this->Standard->read(null, $id);
+			$this->set('standard',$this->request->data);
 		}
 		$schools = $this->Standard->School->find('list');
-		$divisions = $this->Standard->Division->find('list');
-		$this->set(compact('schools', 'divisions'));
+		$this->set(compact('schools'));
 	}
 
 /**
@@ -96,10 +101,10 @@ class StandardsController extends AppController {
 			throw new NotFoundException(__('Invalid standard'));
 		}
 		if ($this->Standard->delete()) {
-			$this->Session->setFlash(__('Standard deleted'));
+			$this->Session->setFlash(__('Standard deleted'),'flash_green');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Standard was not deleted'));
+		$this->Session->setFlash(__('Standard was not deleted'),'flash_red');
 		$this->redirect(array('action' => 'index'));
 	}
 }

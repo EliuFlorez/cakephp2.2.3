@@ -1,10 +1,10 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Department Model
+ * Standard Model
  *
- * @property Company $Company
- * @property User $User
+ * @property School $School
+ * @property Division $Division
  */
 class Division extends AppModel {
 
@@ -14,10 +14,20 @@ class Division extends AppModel {
  * @var array
  */
 
-	public $displayField = 'division_name';
-		
+    public $displayField = 'division_name';
+    
 	public $validate = array(
 		'school_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'standard_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -37,16 +47,6 @@ class Division extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'is_deleted' => array(
-			'boolean' => array(
-				'rule' => array('boolean'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -57,26 +57,22 @@ class Division extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'School' => array(
-			'className' => 'School',
-			'foreignKey' => 'school_id',
+		'Standard' => array(
+			'className' => 'Standard',
+			'foreignKey' => 'standard_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
 			'counterCache'=>true
 		)
+		
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
+	
 	public $hasMany = array(
 		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'division_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
@@ -87,5 +83,6 @@ class Division extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-
+	
+	
 }

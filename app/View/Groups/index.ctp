@@ -59,7 +59,10 @@
 					</td>
 				</tr>
 		<?php endforeach; ?>
-
+		
+		<?php if(empty($groups)){ ?>
+			 <tr><td colspan="10" align="center">No records found</td></tr>
+		<?php } ?>
 				
 				</table>
 				<!--  end product-table................................... --> 

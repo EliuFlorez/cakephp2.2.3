@@ -1,4 +1,7 @@
 
+	
+	
+	
 	<!--  start page-heading -->
 	<div id="page-heading">
 		<h1>Divisions</h1>
@@ -35,17 +38,21 @@
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
 					<th class="table-header-check"><?php echo $this->Paginator->sort('id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('school_id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('division_id'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('standard_id'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('division_name'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('student_count'); ?></th>
 					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('created'); ?></th>
 					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('modified'); ?></th>
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
-		<?php foreach ($divisions as $division): ?>
+		<?php foreach ($divisions as $division): 
+			// echo "<pre>"; print_r($division); exit; 
+		?>
 		       <tr>
 					<td><?php echo h($division['Division']['id']); ?>&nbsp;</td>
-					<td><?php echo h($division['School']['school_name']); ?>&nbsp;</td>
+					<td><?php echo h($division['Standard']['standard_name']); ?>&nbsp;</td>
 					<td><?php echo h($division['Division']['division_name']); ?>&nbsp;</td>
+					<td><?php echo h($division['Division']['student_count']); ?>&nbsp;</td>
 					<td><?php echo h($division['Division']['created']); ?>&nbsp;</td>
 					<td><?php echo h($division['Division']['modified']); ?>&nbsp;</td>
 					
@@ -57,7 +64,10 @@
 				</tr>
 		<?php endforeach; ?>
 
-				
+		<?php if(empty($divisions)){ ?>
+			 <tr><td colspan="10" align="center">No records found</td></tr>
+		<?php } ?>
+		
 				</table>
 				<!--  end product-table................................... --> 
 				

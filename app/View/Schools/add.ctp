@@ -1,6 +1,6 @@
 
 
-<div id="page-heading"><h1>Add Company</h1></div>
+<div id="page-heading"><h1>Add School</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -36,7 +36,7 @@
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
-	<?php echo $this->Form->create('Company', array(
+	<?php echo $this->Form->create('School', array(
 										    'inputDefaults' => array(
 										        'label' => false,
 										        'div' => false,
@@ -47,38 +47,33 @@
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Company name:</th>
-				<td><?php echo $this->Form->input('company_name'); ?></td>
+				<th valign="top">School name:</th>
+				<td><?php echo $this->Form->input('school_name'); ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
 				<th valign="top">Registration number:</th>
-				<td><?php echo $this->Form->input('Company.registration_number'); ?></td>
+				<td><?php echo $this->Form->input('registration_number'); ?></td>
 				<td></td>
 			</tr>	
 			<tr>
 				<th valign="top">Conact Number:</th>
-				<td><?php echo $this->Form->input('Company.contact_number'); ?></td>
+				<td><?php echo $this->Form->input('contact_number'); ?></td>
 				<td></td>
 			</tr>
 		
 			<tr>
 				<th valign="top">Address:</th>
-				<td><?php echo $this->Form->input('Company.location',array('class'=>'form-textarea')); ?></td>
+				<td><?php echo $this->Form->input('location',array('class'=>'form-textarea')); ?></td>
 				<td></td>
 			</tr>
-			<tr>
-				<th valign="top">Department:</th>
-				<td><?php echo $this->Form->input('Department.0.department_name'); ?></td>
-				<td></td>
-			</tr>
-			
+						
 			<tr id='newitems'>
 				<th valign="top"></th>
 				<td>
 				   <input type="hidden" value="1" id="items">
-				   <button type='button' class='addnew'> <i class="icon-plus-sign"></i> + Add Department</button>
+				   <button type='button' class='addnew'> <i class="icon-plus-sign"></i> + Add Standard</button>
 				</td>
 				<td></td>
 			</tr>	
@@ -218,9 +213,9 @@ $(document).ready(function(){
 		var no = $("#items").val();
 			
 		 $('table tr#newitems').before('<tr>'
-			 				 +'<th valign="top">Department:</th>'
+			 				 +'<th valign="top">Standard:</th>'
 							 +'<td><div class="input text required">'
-							 +'<input type="text" class="inp-form" id="Department'+no+'DepartmentName" maxlength="100" name="data[Department]['+no+'][department_name]"/>'
+							 +'<input type="text" class="inp-form" id="Standard'+no+'StandardName" maxlength="100" name="data[Standard]['+no+'][standard_name]"/>'
 							 +'<a href="#" class="removeitem">remove</a></div></td>'
 							 +'</tr>');
 							 		 

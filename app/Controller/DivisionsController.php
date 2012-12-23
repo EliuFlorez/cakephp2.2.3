@@ -12,12 +12,6 @@ class DivisionsController extends AppController {
  *
  * @return void
  */
-
-	public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('add');
-    }
-    
 	public function index() {
 		$this->Division->recursive = 0;
 		$this->set('divisions', $this->paginate());
@@ -46,15 +40,15 @@ class DivisionsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Division->create();
-			if ($this->Division->saveAll($this->request->data,array('deep'=>true))) {
+			if ($this->Division->save($this->request->data)) {
 				$this->Session->setFlash(__('The division has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The division could not be saved. Please, try again.'),'flash_red');
 			}
 		}
-		$companies = $this->Division->Company->find('list');
-		$this->set(compact('companies'));
+		$standards = $this->Division->Standard->find('list');
+		$this->set(compact('standards'));
 	}
 
 /**
@@ -70,7 +64,7 @@ class DivisionsController extends AppController {
 			throw new NotFoundException(__('Invalid division'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Division->saveAll($this->request->data,array('deep'=>true))) {
+			if ($this->Division->save($this->request->data)) {
 				$this->Session->setFlash(__('The division has been saved'),'flash_green');
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -79,8 +73,9 @@ class DivisionsController extends AppController {
 		} else {
 			$this->request->data = $this->Division->read(null, $id);
 		}
-		$schools = $this->Division->School->find('list');
-		$this->set(compact('schools'));
+	
+		$standards = $this->Division->Standard->find('list');
+		$this->set(compact('standards'));
 	}
 
 /**
@@ -105,5 +100,19 @@ class DivisionsController extends AppController {
 		}
 		$this->Session->setFlash(__('Division was not deleted'),'flash_red');
 		$this->redirect(array('action' => 'index'));
+	}
+	
+	public function getDivisions(){
+		$id = $_GET['standard_id'];
+		$this->autoRender= false;
+		
+		$divisions = $this->Division->find('list',array('conditions'=>array('Division.standard_id'=>$id)));
+		if(empty($divisions)){
+		  echo json_encode(0);	
+		}else{
+		   echo json_encode($divisions);	
+		}
+		
+		exit;
 	}
 }

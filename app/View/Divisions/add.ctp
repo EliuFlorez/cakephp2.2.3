@@ -1,6 +1,36 @@
+<!--
+
+<div class="standards form">
+<?php echo $this->Form->create('Standard'); ?>
+	<fieldset>
+		<legend><?php echo __('Add Standard'); ?></legend>
+	<?php
+		echo $this->Form->input('school_id');
+		echo $this->Form->input('division_id');
+		echo $this->Form->input('standard_name');
+	?>
+	</fieldset>
+<?php echo $this->Form->end(__('Submit')); ?>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('List Standards'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('List Schools'), array('controller' => 'schools', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New School'), array('controller' => 'schools', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Divisions'), array('controller' => 'divisions', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Division'), array('controller' => 'divisions', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
 
 
-<div id="page-heading"><h1>Add Department</h1></div>
+-->
+	
+	
+	
+
+<div id="page-heading"><h1>Add Division</h1></div>
 
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="content-table">
@@ -29,14 +59,14 @@
 		<!--  start step-holder -->
 		<div id="step-holder">
 			<div class="step-no">1</div>
-			<div class="step-dark-left"><a href="">Add department details</a></div>
+			<div class="step-dark-left"><a href="">Add Division details</a></div>
 				
 			<div class="clear"></div>
 		</div>
 		<!--  end step-holder -->
 	
 		<!-- start id-form -->
-	<?php echo $this->Form->create('Department', array(
+	<?php echo $this->Form->create('Division', array(
 										    'inputDefaults' => array(
 										        'label' => false,
 										        'div' => false,
@@ -47,18 +77,20 @@
 		<table border="0" cellpadding="0" cellspacing="0"  id="id-form">
 			
 			<tr>
-				<th valign="top">Company :</th>
-				<td><?php echo $this->Form->input('company_id',array('class'=>'styledselect_form_1')); ?></td>
-				<td>
-				
-				</td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Department Name:</th>
-				<td><?php echo $this->Form->input('department_name'); ?></td>
+				<th valign="top">Standard:</th>
+				<td><?php echo $this->Form->input('standard_id',array(
+														'class'=>'',
+														'empty'=>'Choose one'
+													)); 
+    				?></td>
 				<td></td>
-			</tr>	
+			</tr>
+			<tr>
+				<th valign="top">Division:</th>
+				<td><?php echo $this->Form->input('division_name');
+					?><span id="response_msg"></span></td>
+				<td></td>
+			</tr>
 			
 			<tr>
 				<th>&nbsp;</th>
@@ -176,3 +208,5 @@
 	<th class="sized bottomright"></th>
 </tr>
 </table>
+	
+	

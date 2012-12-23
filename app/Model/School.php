@@ -25,7 +25,7 @@ class School extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'division_count' => array(
+		'standard_count' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -85,8 +85,8 @@ class School extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Division' => array(
-			'className' => 'Division',
+		'Standard' => array(
+			'className' => 'Standard',
 			'foreignKey' => 'school_id',
 			'dependent' => true,
 			'conditions' => '',
@@ -98,6 +98,7 @@ class School extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
+		
 	);
 
 }
