@@ -1,4 +1,4 @@
-<?php //echo "<pre>"; print_r($standards); exit; ?>
+
 <div id="page-heading"><h1>My Profile</h1></div>
 
 
@@ -61,10 +61,10 @@
 			<tr>
 				<th valign="top">Registered As :</th>
 				<td>
-				   Student
+				   Teacher
 				   <?php 
 				     echo $this->Form->input('id');	
-				     echo $this->Form->input('Student.id');	
+				     echo $this->Form->input('Teacher.id');	
 				     
 				   ?>
 				</td>
@@ -89,6 +89,37 @@
 				<td><?php echo $this->Form->input('last_name'); ?></td>
 				<td></td>
 			</tr>
+			<tr>
+				<th valign="top">Email Address:</th>
+				<td><?php echo $this->Form->input('email_address'); ?></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<th valign="top">Mobile No:</th>
+				<td><?php echo $this->Form->input('mobile_number'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Telephone No:</th>
+				<td><?php echo $this->Form->input('telephone_no'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Address :</th>
+				<td><?php echo $this->Form->input('address',array('class'=>'form-textaread')); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Fax :</th>
+				<td><?php echo $this->Form->input('fax'); ?></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th valign="top">Pincode:</th>
+				<td><?php echo $this->Form->input('pincode'); ?></td>
+				<td></td>
+			</tr>
 			
 			<tr>
 				<th valign="top">Date of birth:</th>
@@ -108,75 +139,33 @@
 													)); ?></td>
 				<td></td>
 			</tr>
-			
-			<tr>
-				<th valign="top">Email Address:</th>
-				<td><?php echo $this->Form->input('email_address'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Mobile No:</th>
-				<td><?php echo $this->Form->input('mobile_number'); ?></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th valign="top">Telephone No:</th>
-				<td><?php echo $this->Form->input('telephone_no'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Fax :</th>
-				<td><?php echo $this->Form->input('fax'); ?></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th valign="top">Pincode:</th>
-				<td><?php echo $this->Form->input('pincode'); ?></td>
-				<td></td>
-			</tr>
-			
-			<tr>
-				<th valign="top">Address :</th>
-				<td><?php echo $this->Form->input('address',array('class'=>'form-textaread')); ?></td>
-				<td></td>
-			</tr>
-			
 			<tr>
 				<th valign="top"><h3> Other Details <h3></th>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<th valign="top">Standard:</th>
-				<td><?php echo $this->Form->input('Student.standard_id',array(
-														'class'=>'',
-														'empty'=>'Choose one'
-													)); 
-    				?></td>
+				<th valign="top">Qualification:</th>
+				<td><?php echo $this->Form->input('Teacher.qualification'); ?></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<th valign="top">Annual Income:</th>
+				<td><?php echo $this->Form->input('Teacher.annual_income'); ?></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<th valign="top">Specialization:</th>
+				<td><?php echo $this->Form->input('Teacher.specialization',array('class'=>'form-textaread')); ?></td>
 				<td></td>
 			</tr>
 			<tr>
-				<th valign="top">Division:</th>
-				<td><?php echo $this->Form->input('Student.division_id',array(
-														'class'=>'',
-														'empty'=>'Choose division'
-											));
-					?><span id="response_msg"></span></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th valign="top">Roll Number:</th>
-				<td><?php echo $this->Form->input('Student.roll_number'); ?></td>
-				<td></td>
-			</tr>
-  			<tr>
 				<th valign="top">About Me:</th>
-				<td><?php echo $this->Form->input('Student.about_me',array('class'=>'form-textaread')); ?></td>
+				<td><?php echo $this->Form->input('Teacher.about_me',array('class'=>'form-textaread')); ?></td>
 				<td></td>
 			</tr>
-		
 			<tr>
 				<th>&nbsp;</th>
 				<td valign="top">
@@ -295,7 +284,7 @@
 </table>
 	
 	
-<script>
+	<script>
 	$(document).ready(function(){
 		
 		if($(".basic_details").parent().attr('class') == 'step-dark-left'){
@@ -328,50 +317,9 @@
 		  	 $("table#id-form tr:gt(12)").hide();
 		  	 $("table#id-form tr:last").show();
 		 })
-		 
-		 $("#StudentStandardId").change(function(){
-		 	 
-		 	  var standard_id = $('#StudentStandardId').val();
-		 	 
-		 	  if(standard_id!=''){
-					
-	             $.ajax({
-						type:"GET",
-						url:"<?php echo $this->Html->url(array('controller'=>'Divisions','action'=>'getDivisions')) ?>",
-						data:"standard_id="+standard_id,
-						dataType:"json",
-						beforeSend: function(){
-						    $("#response_msg").html("<img src='<?php echo Configure::read('loading_image')?>'>");
-				        },
-						success:function(data){
-							
-							var options;
-							   if(data == 0){
-								   options += '<option value="">  Divisions not added yet </option>';
-								}else{
-							       options += '<option value="">Choose One </option>';
-								   $.each(data, function(key, value) {
-							           options += '<option value="' + key + '">' + value + '</option>';
-							       });	
-								}
-						       $('#StudentDivisionId').html(options);
-							   $("#response_msg").html('');
-						  	
-						},
-						error:function(){
-						  alert('error in loading divisions');
-						}
-						
-
-			        });
-			        
-			        
-			    }
-				
-		 })
 	})
 	  
 	  
 	   
 	  
-</script>	
+	</script>

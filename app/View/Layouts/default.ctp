@@ -189,7 +189,7 @@
 		
 		<tr>
 		   <td><?php echo AuthComponent::user('first_name').'  '. AuthComponent::user('last_name')?></td>
-		   <td><?php echo $this->Session->read('group_name')?></td>
+		   <td><?php  echo $this->Session->read('group_name')?></td>
 		   <td>&nbsp;</td>
 		</tr>
 		<tr>
@@ -302,9 +302,9 @@
 		
 		<div class="nav-divider">&nbsp;</div>
 		                    
-		<ul class="select <?php  if(($this->params->controller =='schools') ||($this->params->controller =='divisions')){echo 'current';}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'))?>"><b>School Mgmt</b><!--[if IE 7]><!--></a><!--<![endif]-->
+		<ul class="select <?php  if(($this->params->controller =='schools') ||($this->params->controller =='standards')||($this->params->controller =='divisions')){echo 'current';}?>"><li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'))?>"><b>School Mgmt</b><!--[if IE 7]><!--></a><!--<![endif]-->
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
-		<div class="select_sub <?php if(($this->params->controller =='schools') ||($this->params->controller =='divisions')){echo 'show';}?>">
+		<div class="select_sub <?php if(($this->params->controller =='schools') ||($this->params->controller =='standards') ||($this->params->controller =='divisions')){echo 'show';}?>">
 			<ul class="sub">
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'schools','action'=>'index'));?>">School</a></li>
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'standards','action'=>'index'));?>">Standards</a></li>

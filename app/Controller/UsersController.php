@@ -17,7 +17,15 @@ class UsersController extends AppController {
 
 	public function beforeFilter(){
         parent::beforeFilter();
-        $this->Auth->allow('register', 'logout','forgotPassword');
+        $this->Auth->allow('register', 'logout','forgotPassword','resetPassword');
+        
+        if($this->request->action =='register'){
+        	if($this->Auth->loggedIn()){
+        		 $this->Session->setFlash(__('Please logout first to register as another user'),'flash_red');
+			     $this->redirect($this->Auth->redirect());
+	    	}
+        	//$this->redirect(array('controller'=>'dashboards','action'=>'index'));
+        }
     }
     
     
@@ -44,7 +52,13 @@ class UsersController extends AppController {
 		  $this->Session->write('group_name',$this->User->Group->field('group_name'));
 	}
 	
+	public function _unsetSlug(){
+		CakeSession::delete('slug');
+		CakeSession::delete('group_name');
+
+	}
 	public function logout() {
+		$this->_unsetSlug();
 	    $this->redirect($this->Auth->logout());
 	}
     
@@ -60,9 +74,9 @@ class UsersController extends AppController {
 											  'User.is_deleted' => 0,
 											)
 								));
-
+			
 				 if(empty($user_data)){
-	        	 	   die("Sorry, Invalid email address.");
+	        	 	   die("Sorry, Invalid username.");
 	        	 }else{
 	        	 	  $this->User->id=$user_data['User']['id'];
 	        	 	  $temporary_password = substr(md5(microtime()), -15, 12);
@@ -100,9 +114,47 @@ class UsersController extends AppController {
 
     
 
+     }
+        
+    public function resetPassword($recovery_password){
+    	
+		    $this->set("title_for_layout","ISF Services : Reset Password");
+            $this->layout='login';
+                       
+            if($this->request->is('post')) {
+			        // print_r($this->request->data);exit;
+            	     // to validate  
+                     $this->User->set($this->request->data);                    
+                     if ($this->User->validates(array('fieldList'=>array('password','confirm_password')))){
+
+                               $this->User->id=$this->data['User']['id'];
+                               if ($this->User->saveField('password',$this->data['User']['password'])) {
+                               			if($this->User->saveField('temporary_password',null)){
+										      $this->Session->setFlash('congratulations, password updated successfully !!!');
+											  $this->redirect(array('action' => 'login'));
+										}	  
+                                }
+                           
+                                                      
+                     }
+            }else{
+            
+             	$user_data=$this->User->find('first',array(
+								'conditions'=>array(
+										'User.temporary_password'=>$recovery_password
+								)
+							));
+				 $this->request->data = $user_data;		
+				 //echo "<pre>"; print_r($this->request->data);exit;		
+	             if($user_data==false){
+	             	
+	             	$this->redirect(array('controller'=>'users','action'=>'notificationMessage','invalid_link'));
+	             }
+            } 
+			
+			
+
         }
-        
-        
         
 	public function index() {
 		$this->User->recursive = 0;
@@ -150,6 +202,7 @@ class UsersController extends AppController {
 				$id = $this->User->id;
 		        $this->request->data['User'] = array_merge($this->request->data['User'], array('id' => $id));
 		        $this->Auth->login($this->request->data['User']);
+		        $this->_setSlug();
 		        $this->redirect(array('controller'=>'users','action'=>'myProfile'));
         
 				$this->Session->setFlash(__('The user has been saved'),'flash_green');
@@ -181,7 +234,7 @@ class UsersController extends AppController {
 			}
 		} else {
 			$this->request->data = $this->User->read(null, $id);
-			echo "<pre/>"; print_r($this->request->data);exit();
+			//echo "<pre/>"; print_r($this->request->data);exit();
 		}
 		
 		
@@ -190,8 +243,11 @@ class UsersController extends AppController {
 		}
 		
 		if($this->Session->read('slug')=='student'){
-			$standards = $this->User->Division->Standard->find('list');
-			$this->set(compact('standards'));
+			$this->loadModel('Standard');
+			$this->loadModel('Division');
+			$standards = $this->Standard->find('list');
+			$divisions = $this->Division->find('list');
+			$this->set(compact('standards','divisions'));
 		    $this->render('student_profile');	
 		}
 		

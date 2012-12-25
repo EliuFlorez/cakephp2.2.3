@@ -109,7 +109,7 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'email_address' => array(
+		/*'email_address' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -128,7 +128,7 @@ class User extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
+		),*/
 		'postal_address' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
@@ -166,19 +166,23 @@ class User extends AppModel {
 			'fields' => '',
 			'order' => '',
 			'counterCache'=>true
-		),
-		'Division' => array(
-			'className' => 'Division',
-			'foreignKey' => 'division_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'counterCache'=>true
-			
 		)
 	);
 	
-	public $hasOne=array('Gaurdian','Student');
+	public $hasOne=array(
+		'Guardian'=>array(
+			'className'	  => 'Guardian',
+			 'dependent'   => true	
+		),
+		'Student'=>array(
+			'className'	  => 'Student',
+			 'dependent'   => true	
+		),
+		'Teacher'=>array(
+			'className'	  => 'Teacher',
+			 'dependent'   => true	
+		),
+	);
 	
 	
 	public function beforeSave($options = array()) {

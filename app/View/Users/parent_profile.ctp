@@ -64,7 +64,7 @@
 				   Parent
 				   <?php 
 				     echo $this->Form->input('id');	
-				     echo $this->Form->input('Gaurdian.id');	
+				     echo $this->Form->input('Guardian.id');	
 				     
 				   ?>
 				</td>
@@ -83,12 +83,18 @@
 				<td><?php echo $this->Form->input('middle_name'); ?></td>
 				<td></td>
 			</tr>
-			
 			<tr>
 				<th valign="top">Last Name:</th>
 				<td><?php echo $this->Form->input('last_name'); ?></td>
 				<td></td>
 			</tr>
+			<tr>
+				<th valign="top">Date of birth:</th>
+				<td><?php echo $this->Form->input('date_of_birth',array('class'=>'')); ?></td>
+				<td></td>
+			</tr>
+			
+			
 			<tr>
 				<th valign="top">Email Address:</th>
 				<td><?php echo $this->Form->input('email_address'); ?></td>
@@ -105,11 +111,7 @@
 				<td><?php echo $this->Form->input('telephone_no'); ?></td>
 				<td></td>
 			</tr>
-			<tr>
-				<th valign="top">Address :</th>
-				<td><?php echo $this->Form->input('address',array('class'=>'form-textaread')); ?></td>
-				<td></td>
-			</tr>
+			
 			<tr>
 				<th valign="top">Fax :</th>
 				<td><?php echo $this->Form->input('fax'); ?></td>
@@ -120,10 +122,9 @@
 				<td><?php echo $this->Form->input('pincode'); ?></td>
 				<td></td>
 			</tr>
-			
 			<tr>
-				<th valign="top">Date of birth:</th>
-				<td><?php echo $this->Form->input('date_of_birth',array('class'=>'')); ?></td>
+				<th valign="top">Address :</th>
+				<td><?php echo $this->Form->input('address',array('class'=>'form-textaread')); ?></td>
 				<td></td>
 			</tr>
 			
@@ -146,19 +147,19 @@
 			</tr>
 			<tr>
 				<th valign="top">Qualification:</th>
-				<td><?php echo $this->Form->input('Gaurdian.qualification'); ?></td>
+				<td><?php echo $this->Form->input('Guardian.qualification'); ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
 				<th valign="top">Annual Income:</th>
-				<td><?php echo $this->Form->input('Gaurdian.annual_income'); ?></td>
+				<td><?php echo $this->Form->input('Guardian.annual_income'); ?></td>
 				<td></td>
 			</tr>
 			
 			<tr>
 				<th valign="top">Accupation:</th>
-				<td><?php echo $this->Form->input('Gaurdian.accupation'); ?></td>
+				<td><?php echo $this->Form->input('Guardian.accupation'); ?></td>
 				<td></td>
 			</tr>
 			

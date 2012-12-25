@@ -1,7 +1,8 @@
 
+<?php // echo "<pre>"; print_r($teachers[0]); exit(); ?>
 	<!--  start page-heading -->
 	<div id="page-heading">
-		<h1>Standards</h1>
+		<h1>Teachers</h1>
 	</div>
 	<!-- end page-heading -->
 
@@ -31,38 +32,40 @@
 			   </div>
 
 		  <!--  start product-table ..................................................................................... -->
-				
+				<?php //echo $this->Html->link(__('New User'), array('action' => 'add'));?>
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
 				<tr>
 					<th class="table-header-check"><?php echo $this->Paginator->sort('id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('school_id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('standard_id'); ?></th>
-					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('division_count'); ?></th>
-					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('created'); ?></th>
-					<th class="table-header-repeat line-left"><?php echo $this->Paginator->sort('modified'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('first_name'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('last_name'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('email_address'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('qualification'); ?></th>
+					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('specialization'); ?></th>
 					<th class="table-header-options line-left"><a href="">Options</a></th>
 				</tr>
-		<?php foreach ($standards as $standard): ?>
+		<?php foreach ($teachers as $teacher):?>
 		       <tr>
-					<td><?php echo h($standard['Standard']['id']); ?>&nbsp;</td>
-					<td><?php echo h($standard['School']['school_name']); ?>&nbsp;</td>
-					<td><?php echo h($standard['Standard']['standard_name']); ?>&nbsp;</td>
-					<td><?php echo h($standard['Standard']['division_count']); ?>&nbsp;</td>
-					<td><?php echo h($standard['Standard']['created']); ?>&nbsp;</td>
-					<td><?php echo h($standard['Standard']['modified']); ?>&nbsp;</td>
-					
+		       		<td><?php echo h($teacher['User']['id']); ?>&nbsp;</td>
+		       		<td><?php echo h($teacher['User']['first_name']); ?>&nbsp;</td>
+					<td><?php echo h($teacher['User']['last_name']); ?>&nbsp;</td>
+					<td><?php echo h($teacher['User']['email_address']); ?>&nbsp;</td>
+					<td><?php echo h($teacher['Teacher']['qualification']); ?>&nbsp;</td>
+					<td><?php echo h($teacher['Teacher']['specialization']); ?>&nbsp;</td>
+									
      				<td class="options-width">
-						<?php echo $this->Html->link('', array('action' => 'view', $standard['Standard']['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
-						<?php echo $this->Html->link('', array('action' => 'edit', $standard['Standard']['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
-						<?php echo $this->Form->postLink('', array('action' => 'delete', $standard['Standard']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $standard['Standard']['id'])); ?>
+						<?php echo $this->Html->link('', array('action' => 'view', $teacher['User']['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
+						<?php echo $this->Html->link('', array('action' => 'edit', $teacher['User']['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
+						<?php echo $this->Form->postLink('', array('action' => 'delete', $teacher['User']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $teacher['User']['id'])); ?>
 					</td>
 				</tr>
 		<?php endforeach; ?>
-	
-		<?php if(empty($standards)){ ?>
-			 <tr><td colspan="10" align="center">No records found</td></tr>
-		<?php } ?>
+		
+		<?php if(empty($teachers)){ ?>
+				 <tr>
+					<td colspan="10" style="text-align:center">No records found &nbsp;</td>
+				 </tr>	
 				
+		<?php } ?>		
 				</table>
 				<!--  end product-table................................... --> 
 				
@@ -73,6 +76,13 @@
 			<table border="0" cellpadding="0" cellspacing="0" id="paging-table">
 			<tr>
 			<td>
+			    <p style="float:right;">
+                    <?php
+                    echo $this->Paginator->counter(array(
+                    'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+                    ));
+                    ?>
+                </p><br/>
 				<div class="paging">
 					<?php
 						echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
@@ -99,4 +109,4 @@
 	</tr>
 	</table>
 
-	
+		

@@ -98,7 +98,7 @@ class EmailConfig {
             'host' => 'ssl://smtp.gmail.com',
             'port' => 465,
             'username' => 'ghadagesandip@gmail.com',
-            'password' => 'password',
+            'password' => 'srg3421902825',
             'transport' => 'Smtp'
         );
 

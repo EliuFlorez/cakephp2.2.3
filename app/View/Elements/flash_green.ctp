@@ -7,7 +7,7 @@
 				<tr>
 					<td class="green-left">
 					    <?php echo $message; ?>
-					    <a href="<?php echo $this->Html->url(array('action'=>'add'))?>">Add new one.</a>
+					   
 					</td>
 					<td class="green-right">
 					   <a class="close-green">

@@ -20,6 +20,14 @@ class Student extends AppModel{
 			'fields' => '',
 			'order' => '',
 			'counterCache'=>true
+		),
+		'Standard' => array(
+			'className' => 'Standard',
+			'foreignKey' => 'standard_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'counterCache'=>true
 		)
 	);	
 }

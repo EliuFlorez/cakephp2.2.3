@@ -69,20 +69,15 @@ class Division extends AppModel {
 	);
 	
 	public $hasMany = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'division_id',
+	
+		'Student' =>array(
+			'className'=>'Student',
+			'foreignKey'=>'division_id',
 			'dependent' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
 		)
+	
 	);
+	
 	
 	
 }

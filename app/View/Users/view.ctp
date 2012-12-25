@@ -49,8 +49,8 @@
 				<td></td>
 			</tr>
 			<tr>
-				<th valign="top">Department :</th>
-				<td><?php echo h($user['Department']['department_name']); ?></td>
+				<th valign="top">Username :</th>
+				<td><?php echo h($user['User']['username']); ?></td>
 				<td></td>
 			</tr>
 			
@@ -112,7 +112,7 @@
 			
 			<tr>
 				<th valign="top">Postal address:</th>
-				<td><?php echo h($user['User']['postal_address']); ?></td>
+				<td><?php echo h($user['User']['address']); ?></td>
 				<td></td>
 			</tr>
 			
