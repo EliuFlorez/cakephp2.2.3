@@ -34,7 +34,7 @@
 		  <!--  start product-table ..................................................................................... -->
 				<?php echo $this->Html->link(__('New User Group'), array('action' => 'add'));?>
 				<table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
-				<tr>
+				<tr >
 					<th class="table-header-check"><?php echo $this->Paginator->sort('id'); ?></th>
 					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('group_name'); ?></th>
 					<th class="table-header-repeat line-left minwidth-1"><?php echo $this->Paginator->sort('user_count'); ?></th>
@@ -55,7 +55,8 @@
      				<td class="options-width">
 						<?php echo $this->Html->link('', array('action' => 'view', $group['Group']['id']),array('class'=>'icon-1 info-tooltip','title'=>'View')); ?>
 						<?php echo $this->Html->link('', array('action' => 'edit', $group['Group']['id']),array('class'=>'icon-3 info-tooltip','title'=>'Edit')); ?>
-						<?php echo $this->Form->postLink('', array('action' => 'delete', $group['Group']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $group['Group']['id'])); ?>
+						<?php // echo $this->Form->postLink('', array('action' => 'delete', $group['Group']['id']), array('class'=>'icon-2 info-tooltip', 'title'=>'delete'), __('Are you sure you want to delete # %s?', $group['Group']['id'])); ?>
+						<a href="#" class="delete" id="<?php echo $group['Group']['id'];?>">Delete</a>
 					</td>
 				</tr>
 		<?php endforeach; ?>

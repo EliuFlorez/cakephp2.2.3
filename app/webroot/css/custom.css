@@ -5,3 +5,11 @@
 .error-message{
  color : red;
 }
+
+table#product-table tr:nth-child(even) {
+	background: #D3D3D3;
+}
+
+table#product-table tr:nth-child(odd) {
+	background: #F5F5F5;
+}

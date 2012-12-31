@@ -30,7 +30,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css(array('screen','custom','datePicker'));
-		echo $this->Html->script(array('jquery-1.8.3.min','ui.core','ui.checkbox','jquery.bind','jquery.selectbox-0.5','jquery.selectbox-0.5_style_2','jquery.filestyle','custom_jquery','jquery.tooltip','jquery.dimensions','date','jquery.datePicker','jquery.pngFix.pack'));
+		echo $this->Html->script(array('jquery-1.8.3.min','ui.core','ui.checkbox','jquery.bind','jquery.selectbox-0.5','jquery.selectbox-0.5_style_2','jquery.filestyle','custom_jquery','jquery.tooltip','jquery.dimensions','date','jquery.datePicker','jquery.pngFix.pack','jquery.animate-colors-min'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -51,7 +51,10 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.styledselect').selectbox({ inputClass: "selectbox_styled" });
+			
 		});
+		
+		
 	</script>
 
 	<script type="text/javascript">
@@ -292,8 +295,11 @@
 		<!--[if lte IE 6]><table><tr><td><![endif]-->
 		<div class="select_sub <?php if(($this->params->controller =='users') ||($this->params->controller =='groups')){echo 'show';}?>">
 			<ul class="sub">
-				<li><a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'index'));?>">Users</a></li>
 				<li><a href="<?php echo $this->Html->url(array('controller'=>'groups','action'=>'index'));?>">User Groups</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'users','action'=>'index'));?>">Users</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'students','action'=>'index'));?>">Students</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'teachers','action'=>'index'));?>">Teachers</a></li>
+				<li><a href="<?php echo $this->Html->url(array('controller'=>'guardians','action'=>'index'));?>">Parents</a></li>
 		    </ul>
 		</div>
 		<!--[if lte IE 6]></td></tr></table></a><![endif]-->
@@ -362,6 +368,37 @@
 	<div class="clear">&nbsp;</div>
 </div>
 <!-- end footer -->
-	
+
+
+<script>
+
+	$(document).ready(function() {
+
+		$('a.delete').click(function(){
+	   
+		    var parent = $(this).parent().parent();
+		    var del_id = $(this).attr("id");
+		   
+			    $.ajax({
+			      type: 'post',
+			      url: '<?php echo $this->Html->url(array('action'=>'delete',));?>/'+del_id,
+			     
+			      beforeSend: function() {
+			         parent.css("background","red");
+			      },
+			      success: function(){
+			      	  parent.slideUp("slow");
+			        
+			      },
+			      error: function() {
+			        alert("sorry could not delete");
+			      }
+		   	 });
+	   	 
+	   	});
+	   	 
+	  });
+
+</script>
 </body>
 </html>

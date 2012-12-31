@@ -88,6 +88,8 @@ class GroupsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		echo "done";
+		exit;
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
